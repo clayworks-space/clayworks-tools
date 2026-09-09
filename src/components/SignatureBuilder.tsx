@@ -10,6 +10,7 @@ type FormValues = {
   job_title: string;
   phone: string;
   linkedin_url: string;
+  address: string;
 };
 
 export function SignatureBuilder({
@@ -28,6 +29,7 @@ export function SignatureBuilder({
     job_title: profile.job_title || "",
     phone: profile.phone || "",
     linkedin_url: profile.linkedin_url || "",
+    address: profile.address || "",
   });
   const [copied, setCopied] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -148,6 +150,15 @@ export function SignatureBuilder({
           </Field>
           <Field label="Email">
             <input value={profile.email} disabled className="input opacity-60 cursor-not-allowed" />
+          </Field>
+          <Field label="Office address">
+            <textarea
+              value={values.address}
+              onChange={(e) => update("address", e.target.value)}
+              rows={2}
+              className="input resize-none"
+              placeholder="3rd Floor, Site No. 74, Mass Complex, 15th Cross Rd, J. P. Nagar, Bengaluru, Karnataka 560078"
+            />
           </Field>
 
           <div className="flex items-center gap-3 pt-1">

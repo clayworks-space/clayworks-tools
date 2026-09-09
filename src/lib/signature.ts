@@ -8,6 +8,7 @@ export const PLACEHOLDER_FIELDS = [
   "phone",
   "email",
   "linkedin_url",
+  "address",
   "logo_url",
   "banner_url",
 ] as const;
@@ -38,6 +39,8 @@ export function renderSignature(templateHtml: string, values: SignatureValues): 
   return templateHtml.replace(/{{\s*([a-z_]+)\s*}}/gi, (_match, field: string) => {
     const value = values[field];
     if (!value) return "";
-    return escapeHtml(String(value));
+    // Multi-line fields (e.g. a typed-in address) should keep their line
+    // breaks in the rendered HTML rather than collapsing to one line.
+    return escapeHtml(String(value)).replace(/\n/g, "<br/>");
   });
 }

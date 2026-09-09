@@ -18,6 +18,7 @@ export type Profile = {
   department: string | null;
   centre: string | null;
   linkedin_url: string | null;
+  address: string | null;
   role: Role;
   created_at: string;
 };

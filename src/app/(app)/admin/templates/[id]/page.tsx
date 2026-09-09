@@ -30,6 +30,7 @@ export default async function EditTemplatePage({
         <code className="bg-brand-light px-1 rounded">{"{{phone}}"}</code>,{" "}
         <code className="bg-brand-light px-1 rounded">{"{{email}}"}</code>,{" "}
         <code className="bg-brand-light px-1 rounded">{"{{linkedin_url}}"}</code>,{" "}
+        <code className="bg-brand-light px-1 rounded">{"{{address}}"}</code>,{" "}
         <code className="bg-brand-light px-1 rounded">{"{{logo_url}}"}</code>, and{" "}
         <code className="bg-brand-light px-1 rounded">{"{{banner_url}}"}</code> as placeholders —
         the last two come from <span className="font-medium">Admin → Branding</span>, everything
