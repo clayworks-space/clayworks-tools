@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import Link from "next/link";
 import { signIn } from "@/app/login/actions";
 
 export function LoginForm({ next }: { next: string }) {
@@ -54,7 +55,11 @@ export function LoginForm({ next }: { next: string }) {
       </button>
 
       <p className="text-xs text-muted text-center">
-        Don&apos;t have an account? Ask your admin to create one for you.
+        Don&apos;t have an account?{" "}
+        <Link href="/signup" className="text-brand hover:underline">
+          Sign up
+        </Link>{" "}
+        with your @clayworks.in email.
       </p>
     </form>
   );

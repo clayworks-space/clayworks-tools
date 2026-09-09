@@ -16,6 +16,9 @@ export async function signIn(_prevState: { error?: string } | undefined, formDat
   const { error } = await supabase.auth.signInWithPassword({ email, password });
 
   if (error) {
+    if (error.message.toLowerCase().includes("confirm")) {
+      return { error: "Please confirm your email first — check your inbox for the confirmation link." };
+    }
     return { error: "Incorrect email or password. Ask your admin if you're not sure." };
   }
 
