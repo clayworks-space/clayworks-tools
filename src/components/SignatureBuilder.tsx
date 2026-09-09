@@ -115,8 +115,8 @@ export function SignatureBuilder({
   }
 
   return (
-    <div className="grid md:grid-cols-2 gap-8">
-      <div>
+    <div className="flex flex-col gap-8">
+      <div className="max-w-xl">
         <div className="bg-card border border-border rounded-2xl p-5 space-y-4">
           <Field label="Full name" required>
             <input

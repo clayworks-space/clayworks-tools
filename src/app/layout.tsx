@@ -9,7 +9,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Clayworks Tools",
+  title: "Signature Tool - Clayworks Spaces",
   description: "Internal tools for Clayworks Spaces — Email Signature Generator and more.",
 };
 
