@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import Link from "next/link";
 import { signUp } from "@/app/signup/actions";
+import { PasswordInput } from "@/components/PasswordInput";
 
 export function SignupForm() {
   const [state, formAction, pending] = useActionState(signUp, undefined);
@@ -57,30 +58,14 @@ export function SignupForm() {
         <label htmlFor="password" className="block text-sm font-medium text-foreground/80 mb-1">
           Password
         </label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          required
-          minLength={8}
-          autoComplete="new-password"
-          className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-brand"
-        />
+        <PasswordInput id="password" name="password" required minLength={8} autoComplete="new-password" />
       </div>
 
       <div>
         <label htmlFor="confirm_password" className="block text-sm font-medium text-foreground/80 mb-1">
           Confirm password
         </label>
-        <input
-          id="confirm_password"
-          name="confirm_password"
-          type="password"
-          required
-          minLength={8}
-          autoComplete="new-password"
-          className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-brand"
-        />
+        <PasswordInput id="confirm_password" name="confirm_password" required minLength={8} autoComplete="new-password" />
       </div>
 
       {state?.error && (

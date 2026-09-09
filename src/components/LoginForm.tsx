@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import Link from "next/link";
 import { signIn } from "@/app/login/actions";
+import { PasswordInput } from "@/components/PasswordInput";
 
 export function LoginForm({ next }: { next: string }) {
   const [state, formAction, pending] = useActionState(signIn, undefined);
@@ -30,14 +31,7 @@ export function LoginForm({ next }: { next: string }) {
         <label htmlFor="password" className="block text-sm font-medium text-foreground/80 mb-1">
           Password
         </label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          required
-          autoComplete="current-password"
-          className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-brand"
-        />
+        <PasswordInput id="password" name="password" required autoComplete="current-password" />
       </div>
 
       {state?.error && (
