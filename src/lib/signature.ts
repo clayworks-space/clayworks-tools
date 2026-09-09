@@ -8,7 +8,8 @@ export const PLACEHOLDER_FIELDS = [
   "phone",
   "email",
   "linkedin_url",
-  "address",
+  "address_line1",
+  "address_line2",
   "logo_url",
   "banner_url",
 ] as const;

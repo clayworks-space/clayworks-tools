@@ -12,7 +12,8 @@ const SAMPLE_PROFILE = {
   phone: "+91 90000 00000",
   email: "jane.doe@clayworks.in",
   linkedin_url: "https://linkedin.com/in/jane-doe",
-  address: "3rd Floor, Site No. 74, Mass Complex, 15th Cross Rd, J. P. Nagar, Bengaluru, Karnataka 560078",
+  address_line1: "3rd Floor, Site No. 74, Mass Complex, 15th Cross Rd",
+  address_line2: "J. P. Nagar, Bengaluru, Karnataka 560078",
 };
 
 export function TemplateEditor({

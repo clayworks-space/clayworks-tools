@@ -10,7 +10,8 @@ type FormValues = {
   job_title: string;
   phone: string;
   linkedin_url: string;
-  address: string;
+  address_line1: string;
+  address_line2: string;
 };
 
 export function SignatureBuilder({
@@ -29,7 +30,8 @@ export function SignatureBuilder({
     job_title: profile.job_title || "",
     phone: profile.phone || "",
     linkedin_url: profile.linkedin_url || "",
-    address: profile.address || "",
+    address_line1: profile.address_line1 || "",
+    address_line2: profile.address_line2 || "",
   });
   const [copied, setCopied] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -151,13 +153,20 @@ export function SignatureBuilder({
           <Field label="Email">
             <input value={profile.email} disabled className="input opacity-60 cursor-not-allowed" />
           </Field>
-          <Field label="Office address">
-            <textarea
-              value={values.address}
-              onChange={(e) => update("address", e.target.value)}
-              rows={2}
-              className="input resize-none"
-              placeholder="3rd Floor, Site No. 74, Mass Complex, 15th Cross Rd, J. P. Nagar, Bengaluru, Karnataka 560078"
+          <Field label="Office address — line 1">
+            <input
+              value={values.address_line1}
+              onChange={(e) => update("address_line1", e.target.value)}
+              className="input"
+              placeholder="3rd Floor, Site No. 74, Mass Complex, 15th Cross Rd"
+            />
+          </Field>
+          <Field label="Office address — line 2">
+            <input
+              value={values.address_line2}
+              onChange={(e) => update("address_line2", e.target.value)}
+              className="input"
+              placeholder="J. P. Nagar, Bengaluru, Karnataka 560078"
             />
           </Field>
 
