@@ -11,9 +11,10 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     <div className="flex-1 flex flex-col">
       <header className="border-b border-border bg-card">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/dashboard" className="flex items-baseline gap-2">
-            <span className="text-lg font-bold text-brand tracking-wide">CLAYWORKS</span>
-            <span className="text-xs text-muted hidden sm:inline">Tools</span>
+          <Link href="/dashboard" className="flex items-center gap-2.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/clayworks-logo.webp" alt="Clayworks" width={32} height={32} className="rounded-md" />
+            <span className="text-lg font-bold text-brand tracking-wide">Tools</span>
           </Link>
 
           <nav className="flex items-center gap-1 text-sm">

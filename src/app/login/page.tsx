@@ -11,8 +11,15 @@ export default async function LoginPage({
     <div className="flex-1 flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="inline-block text-2xl font-bold text-brand tracking-wide">CLAYWORKS</div>
-          <div className="text-[10px] tracking-widest text-muted mt-0.5">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/clayworks-logo.webp"
+            alt="Clayworks"
+            width={56}
+            height={56}
+            className="inline-block rounded-xl"
+          />
+          <div className="text-[10px] tracking-widest text-muted mt-2">
             HUMANSENSE AT WORK&reg;
           </div>
           <h1 className="text-lg font-semibold mt-6">Sign in to Clayworks Tools</h1>
