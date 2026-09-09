@@ -103,7 +103,7 @@ export function TemplateEditor({
 
         <div>
           <p className="text-xs font-medium text-foreground/70 mb-1">Preview (sample data)</p>
-          <div className="rounded-lg border border-border bg-white p-4 min-h-[200px]">
+          <div className="rounded-lg border border-border bg-white p-4 min-h-[200px] overflow-x-auto">
             <div dangerouslySetInnerHTML={{ __html: preview }} />
           </div>
         </div>

@@ -187,7 +187,7 @@ export function SignatureBuilder({
 
       <div>
         <p className="text-sm font-medium mb-2">Preview</p>
-        <div className="bg-white border border-border rounded-2xl p-5 min-h-[140px]">
+        <div className="bg-white border border-border rounded-2xl p-5 min-h-[140px] overflow-x-auto">
           <div ref={previewRef} dangerouslySetInnerHTML={{ __html: renderedHtml }} />
         </div>
 

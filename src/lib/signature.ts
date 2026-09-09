@@ -37,7 +37,7 @@ function escapeHtml(value: string) {
  * than leaving the raw placeholder visible.
  */
 export function renderSignature(templateHtml: string, values: SignatureValues): string {
-  return templateHtml.replace(/{{\s*([a-z_]+)\s*}}/gi, (_match, field: string) => {
+  return templateHtml.replace(/{{\s*([a-z_][a-z0-9_]*)\s*}}/gi, (_match, field: string) => {
     const value = values[field];
     if (!value) return "";
     // Multi-line fields (e.g. a typed-in address) should keep their line
